@@ -1,0 +1,14 @@
+{
+  "name": "contact-book",
+  "description": "",
+  "version": "0.0.0",
+  "main": "./server.js",
+  "dependencies": {
+    "derby": "git://github.com/codeparty/derby#master",
+    "racer": "git://github.com/codeparty/racer#master",
+    "express": "*",
+    "derby-auth": "git://github.com/lefnire/derby-auth#master",
+    "gzippo": "*"
+  },
+  "private": true
+}
