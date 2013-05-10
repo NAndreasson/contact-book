@@ -1,0 +1,47 @@
+<Title:>
+  Contact Book - Contacts
+
+<Header:>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a href="" class="brand">Contact Book</a>
+    </div>
+  </div>
+
+<Body:>
+  <div id="wrapper">
+    <div class="left-col">
+        <div class="btn-group" id="list-type">
+          <button class="btn active">Contacts</button>
+          <button class="btn">Groups</button>
+        </div>
+      <ul id="contacts">
+        {#each _contacts as :contact}
+        <li x-bind="click: changePrimaryContact"><app:contactListItem></li>
+        {/}
+      </ul>
+      <footer>
+        <button class="btn btn-primary" x-bind="click: addNewContact">New Contact</button>
+        <button class="btn">Edit</button>
+      </footer>
+    </div>
+    <div class="right-col">
+      {#if _primaryContact}
+        <app:contact>
+      {/}
+    </div>
+  </div>
+
+<contactListItem:>
+  <div class="contact">
+    <img src="img/gravatar.jpg" />
+    <span class="name">{.name}</span>
+  </div>
+
+<contact:>
+  <div id="primary-contact">
+    <header>
+      <img src="img/gravatar.jpg">
+      <h2>{_primaryContact.name}</h2>
+    </header>
+  </div>
