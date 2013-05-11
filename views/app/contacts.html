@@ -34,13 +34,15 @@
         {/}
       </ul>
       <footer>
-        <button class="btn btn-primary" x-bind="click: addNewContact">New Contact</button>
+        <button class="btn btn-primary" x-bind="click: addNewContactMode">New Contact</button>
         <button class="btn">Edit</button>
       </footer>
     </div>
     <div class="right-col">
-      {#if _primaryContact}
+      {#if not(_addNewContactMode)}
         <app:contact>
+      {else}
+        <app:addNewContact>
       {/}
     </div>
   </div>
@@ -58,3 +60,11 @@
       <h2>{_primaryContact.name}</h2>
     </header>
   </div>
+
+<addNewContact:>
+  <div id="primary-contact">
+    <form>
+      <label for="name">Name</label>
+      <input type="text" placeholder="John Doe">
+    </form>
+  </div>  
