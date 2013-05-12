@@ -62,9 +62,26 @@
   </div>
 
 <addNewContact:>
-  <div id="primary-contact">
+  <div id="add-new-contact" style="text-align: left">
+    <header>
+        <!-- img should be changeable on hover, upload a new file or something -->
+        <img src="img/gravatar.jpg">
+<!--         <h2 contenteditable="true">John Doe</h2>
+ -->    </header>
     <form>
-      <label for="name">Name</label>
-      <input type="text" placeholder="John Doe">
+      <ul>
+        <li>
+          <label>Name</label>
+          <input type="text" placeholder="John Doe" />
+        </li>
+        <li>
+          <label>Phone</label>
+          <input type="tel" placeholder="031-253124" />
+        </li>
+        <li>
+          <label>E-mail</label>
+          <input type="email" placeholder="john.doe@gmail.com" />
+        </li>
+      </ul>
     </form>
-  </div>  
+  </div>
